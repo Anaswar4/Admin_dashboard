@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ── Container ─────────────────────────────────────── */
+.login-container {
+  min-height: 100vh;
+  background-color: #0f1221;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  padding: 24px;
+}
+
+/* ── Card / Form ────────────────────────────────────── */
+.login-form {
+  width: 100%;
+  max-width: 400px;
+  background-color: #1a1d2e;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+}
+
+/* ── Heading ────────────────────────────────────────── */
+.login-form h2 {
+  color: #e2e8f0;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  margin-bottom: 4px;
+}
+
+/* ── Error ──────────────────────────────────────────── */
+.error {
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  color: #ef4444;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px 14px;
+  border-radius: 10px;
+}
+
+/* ── Inputs ─────────────────────────────────────────── */
+.login-form input {
+  width: 100%;
+  padding: 11px 14px;
+  background-color: #0f1221;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 10px;
+  color: #e2e8f0;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-form input::placeholder {
+  color: #475569;
+}
+
+.login-form input:focus {
+  border-color: #a4a39f;
+  box-shadow: 0 0 0 3px rgba(164, 163, 159, 0.12);
+}
+
+/* ── Button ─────────────────────────────────────────── */
+.login-btn {
+  width: 100%;
+  padding: 11px;
+  margin-top: 4px;
+  border: none;
+  border-radius: 10px;
+  background-color: #a4a39f;
+  color: #1a1d2e;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.login-btn:hover {
+  background-color: #bdbcb8;
+}
+
+.login-btn:active {
+  transform: scale(0.98);
+}

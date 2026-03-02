@@ -1,5 +1,8 @@
 import {useState} from 'react'
+import { useNavigate } from "react-router-dom";
+import { logout } from "./services/auth";
 import './Dashboard.css'
+
 
 /* dummy data */
 const navItems=[
@@ -40,6 +43,13 @@ const categoryRanking = [
 ];
 
 export default function dashboard(){
+    
+    const navigate = useNavigate();
+    const handleLogout = () => {
+       logout();           
+       navigate("/login"); 
+     };
+
     const [dateOpen ,setDateOpen]=useState(false);
     const [range,setRange]=useState('Last 7 days');
     const [quickAction,setQuickAction]=useState(false);
@@ -76,7 +86,7 @@ export default function dashboard(){
             </nav>
             {/* logout */}
             <div className='sidebar-logout'>
-                <button className='logout-btn'>
+                <button className='logout-btn' onClick={handleLogout}>
                     <i className="fa-solid fa-right-from-bracket" />
                     Logout 
                 </button>
